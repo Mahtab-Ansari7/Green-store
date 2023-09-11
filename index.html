@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green store</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-yellow-50 md:flex flex items-center justify-between fixed z-20 w-full">
+        <div>
+            <div id="logo" class="text-[40px]  text-green-500 md:w-1/2 mx-2 text-center font-serif">Greenstore</div>
+        </div>
+        <div class="text-center">
+            <nav class="hidden md:flex space-x-3 mx-4 py-4 font-serif">
+                <a href="#home" class="hover:text-gray-500">Home</a>
+                <a href="#plant" class="hover:text-gray-500">Plant</a>
+                <a href="#about" class="hover:text-gray-500">About</a>
+                <a href="#contact" class="hover:text-gray-500">Contact</a>
+                <a href="#home" class="fa fa-shopping-cart text-lg hover:text-gray-500"></a>
+                <a href="#home" class="fa fa-user text-xl hover:text-gray-500"></a>
+            </nav>
+            <button id="hamburger" class="md:hidden block text-gray-500 hover:text-gray-800">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-yellow-50 py-4">
+        <div class="text-center">
+            <a href="#home" class="block py-2 hover:bg-yellow-100">Home</a>
+            <a href="#plant" class="block py-2 hover:bg-yellow-100">Plant</a>
+            <a href="#about" class="block py-2 hover:bg-yellow-100">About</a>
+            <a href="#contact" class="block py-2 hover:bg-yellow-100">Contact</a>
+            <a href="#home" class="block py-2 hover:bg-yellow-100"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="#home" class="block py-2 hover:bg-yellow-100"><i class="fa fa-user"></i> Profile</a>
+        </div>
+    </div>
+    <script>
+        const hamburgerButton = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>     
+<section id="home" class="bg-cover bg-center bg-no-repeat " style="background-image: url(images/landing.jpg);">
+ <div >
+    <p class=" font-sans relative top-44 text-3xl text-center">WELCOME TO THE GREENSTORE</p>
+ </div>
+ <div class="relative top-56 flex justify-center  ">
+    <div class="font-sans text-6xl  text-center w-[633px]">Let&apos;s Bring the Spring to Your Home</div>
+ </div>
+ <div class="flex justify-center">
+     <button  class=" font-sans bg-green-600 relative top-64 hover:bg-white  text-xl p-3">Shop Now</button>
+ </div>
+
+ <section class="bg-gray-100 py-8 relative top-[500px] ">
+    <div class="container mx-auto">
+        <h2 class="text-2xl text-green-600 font-semibold text-center mb-4">Subscribe to Our Newsletter</h2>
+        <p class="text-center text-gray-600">Stay updated with our latest plant arrivals and gardening tips!</p>
+        
+        <form action="process_newsletter_signup.php" method="post" class="max-w-md mx-auto mt-4 p-4 bg-white shadow-lg rounded-lg">
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 focus:outline-none focus:bg-green-600">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+ <div class="flex  justify-around flex-wrap ">
+    <div class="relative top-[500px] flex my-4  rounded-3xl  w-72 sm:w-96 ">
+        <a href="#home" class="fa fa-tree text-5xl text-green-500"></a>
+        <div class="flex ml-4 flex-col">
+            <span class="text-xl font-serif text-green-500">Plants Collection</span>
+            <span class="text-center font">Any plants for your space</span>
+        </div>     
+    </div>
+    <div class="relative top-[500px] flex my-4  rounded-3xl  w-72 sm:w-96 ">
+        <a href="#home" class="fa fa-truck text-green-500 text-5xl "></a>
+        <div class="flex ml-4 flex-col">
+            <span class="text-xl  font-serif text-green-500">Free Shipping</span>
+            <span class="text-center font">Free shipping on order</span>
+        </div>
+    </div>
+    <div class="relative top-[500px] flex my-4  rounded-3xl  w-72 sm:w-96 ">
+        <a href="#home" class="fa fa-refresh text-5xl text-green-500 "></a>
+        <div class="flex ml-4 flex-col">
+            <span class="text-xl  font-serif text-green-500">100% Money Back</span>
+            <span class="text-center font">If the item didn't suit you</span>
+        </div>
+    </div>
+ </div>
+</section>
+
+
+<section id="plant" class="relative md:top-[500px]  top-[500px]">
+    <div class="flex flex-wrap justify-around">
+        <div class="hover:shadow-2xl hover:cursor-pointer  flex items-center flex-col my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (9).png" alt="">
+            <h3 class="text-xl text-center font-serif text-green-500">Beautiful Plant Varieties</h3>
+            <p class="text-center font">The prettiest flowers in the world include rare camellias, expensive roses, elusive orchids...</p>
+            <div class="flex justify-center my-8">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">SEE COLLECTION</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg.png" alt="">
+            <h3 class="text-xl text-center font-serif text-green-500">Gardening Accessories</h3>
+            <p class="text-center font">The most essential gardening accessories include gloves, a watering can,a rake, and pruning shears</p>
+            <div class="flex justify-center my-8">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">SEE COLLECTION</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (3).png" alt="">
+            <h3 class="text-xl text-center font-serif text-green-500">High Quality Plants</h3>
+            <p class="text-center font">Take a good look at the foliage condition of the plant you're interested in..</p>
+            <div class="flex justify-center my-8">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">SEE COLLECTION</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col mt-16">
+        <div class="flex justify-center">
+            <h class="text-5xl font-serif">Featured Plants</h>
+        </div>
+        <div class=" flex justify-center">
+            <p class="text-lg text-gray-600 font-sans mt-5">Amazing Variety Of Plants Starting Just $6</p>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-around">
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (1).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Anubias Hastifolia</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$25.60</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (2).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Dragon tree</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$30.40</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (4).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Devil&apos;s ivy</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$35.10</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (5).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Philodendron plant</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$29.90</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (6).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Areca palm</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$41.30</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (7).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Golden snake plant</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$10.20</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (8).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Alocasia odora</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$8.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (10).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Dwarf umbrella tree</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$23.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (11).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Majesty palm</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$33.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (12).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Laceleaaf</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$13.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (13).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Oceanioptris gibba</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$15.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (14).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Howea forsteriana</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$11.40</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (15).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Philodendron</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$50.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class="h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (16).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Dracaena trifasciata</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$119.10</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+        <div class="hover:shadow-2xl hover:cursor-pointer flex items-center flex-col  my-4 bg-purple-50 sm:top-[600px] rounded-3xl h-[450px] w-72 sm:w-96 ">
+            <img class=" h-64 transition-transform transform scale-100 hover:scale-110" src="images/pngegg (17).png" alt="image not found">
+            <h3 class="text-xl text-center font-serif text-green-500">Bird of paradise</h3>
+            <div class="flex items-start mt-12">
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+                <span class="fa fa-star text-gray-300"></span>
+            </div>
+            <p class="text-center font">$31.00</p>
+            <div class="flex justify-center ">
+                <a class="text-red-500 hover:underline font-semibold" href="#plant">Add to cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="bg-cover bg-center bg-no-repeat relative top-[600px]   md:h-[600px]  h-[700px]" style="background-image: url(images/about.jpg);">
+    <div class="">
+       <p class="text-7xl py-10 px-5 font-serif">About us</p>
+    </div>
+    <div class="ml-5 md:w-[650px]">
+        <p class="text-2xl text-green-600 mt-14 font-semibold">We Work Hard To Provide You The Best Quality Plants And Succulents</p>
+        <p class="mt-16 text-[#17e4b1] font-semibold">High quality plants don&apos;t grow by themselves. The environment has to be just right. That can mean different things to different people, but primarily it refers to evenness in plant growth — getting the leaves, flowers and fruit to be the same size and shape from plant to plant.</p>
+        <button class="bg-red-500 mt-8 hover:bg-green-400 p-3">Read more</button>
+    </div>
+</section>
+
+<section id="contact" class="bg-cover bg-center bg-no-repeat relative top-[650px]   md:h-[600px]  h-[700px]" style="background-image: url(images/contact.jpg);">
+    <div class="">
+       <p class="text-7xl py-10 px-5 font-serif">Get In Touch</p>
+    </div>
+    <div class=" space-x-4 text-green-500 text-3xl   ml-5">
+        <a href="#home" class="fa fa-facebook hover:text-3xl"></a>
+        <a href="#home" class="fa fa-twitter hover:text-3xl"></a>
+        <a href="#home" class="fa fa-instagram hover:text-3xl"></a>
+        <a href="#home" class="fa fa-google hover:text-3xl"></a>
+        <a href="#home" class="fa fa-whatsapp hover:text-3xl"></a>              
+      </div>
+    <div class="ml-5 mt-6 h-96 w-72 rounded-3xl bg-slate-300">
+        <div>
+            <input class="w-64 h-12 my-4 ml-3 text-center hover:shadow-xl rounded-md " name="Name" type="text" placeholder="Enter your name">
+        </div>
+        <div>
+            <input class="w-64 h-12 my-4 ml-3 text-center hover:shadow-xl rounded-md " name="Email" type="email" placeholder="Enter your email">
+        </div>
+        <div >
+            <textarea class="w-64 my-4 ml-3 text-center hover:shadow-xl rounded-md " name="Message" placeholder="type message" id="" cols="25" rows="5"></textarea>
+        </div>
+        <div class="flex justify-center">
+            <button class="bg-red-500 ml-3 rounded-md hover:bg-green-400 p-3">Submit</button>
+        </div>
+    </div>
+</section>
+<footer>
+    <div></div>
+</footer>
+</body>
+</html>
